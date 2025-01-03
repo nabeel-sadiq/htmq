@@ -1,0 +1,8 @@
+{
+    "name": "sigma-html",
+    "version": "0.0.9",
+    "description": "s-html (sigma-html) provide some useful attributes for html elements.",
+    "main": "dist/main.js",
+    "author": "Nabeel Sadiq",
+    "license": "ISC"
+}
