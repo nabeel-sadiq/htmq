@@ -14,7 +14,7 @@ Documentation for all these attributes is available [here](https://htmq.vercel.a
 You can install htmq (~4kb), via the CDN:
 
 ```html
-<script src="https://unpkg.com/htmq@1.0.5/main.js" defer></script>
+<script src="https://unpkg.com/htmq@1.0.6/main.min.js" defer></script>
 ```
 
 Created and maintained by [@nabeel-sadiq](https://github.com/nabeel-sadiq).

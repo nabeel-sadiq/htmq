@@ -1,8 +1,8 @@
 {
     "name": "htmq",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "htmq provides powerful attributes for html elements.",
-    "main": "main.js",
+    "main": "main.min.js",
     "author": "Nabeel Sadiq",
     "license": "ISC"
 }
