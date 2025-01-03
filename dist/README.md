@@ -1,7 +1,7 @@
 # ⚡ HTMQ
 
 HTMQ allows you to supercharge your html with some useful and shorthand attributes.
-Every attribute is prefixed with `-s`, and the attributes available to date are:
+Every attribute is prefixed with `q-`, and the attributes available to date are:
 
 -   q-click
 -   q-hover
