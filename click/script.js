@@ -14,10 +14,29 @@ if (head) {
 }
 
 clickElements.forEach((element) => {
-    const box = document.querySelector(`${element.getAttribute("q-click")}`);
+    const attrValue = element.getAttribute("q-click");
+    attrArray = attrValue.split(" / ");
+    const boxSelector = attrArray[0];
+
+    const box = document.querySelector(boxSelector);
     box.classList.add("hidden-for-q-click");
+
+    const ogText = element.textContent;
+    let newText;
+    if (attrArray[1]) {
+        newText = attrArray[1];
+    } else {
+        newText = "";
+    }
 
     element.addEventListener("click", () => {
         box.classList.toggle("hidden-for-q-click");
+        if (newText !== "") {
+            if (element.textContent === ogText) {
+                element.textContent = newText;
+            } else {
+                element.textContent = ogText;
+            }
+        }
     });
 });

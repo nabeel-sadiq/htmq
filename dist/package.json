@@ -1,7 +1,7 @@
 {
     "name": "htmq",
-    "version": "1.0.3",
-    "description": "htmq provides some useful attributes for html elements.",
+    "version": "1.0.4",
+    "description": "htmq provides powerful attributes for html elements.",
     "main": "main.js",
     "author": "Nabeel Sadiq",
     "license": "ISC"
