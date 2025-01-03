@@ -1,7 +1,7 @@
-const shortcutElements = document.querySelectorAll("[s-shortcut]");
+const shortcutElements = document.querySelectorAll("[q-shortcut]");
 
 shortcutElements.forEach((element) => {
-    const shortcut = element.getAttribute("s-shortcut");
+    const shortcut = element.getAttribute("q-shortcut");
     let shortKey = shortcut.trim().split("ctrl + ").join("").trim();
 
     if (shortKey === "w" || shortKey === "t") {

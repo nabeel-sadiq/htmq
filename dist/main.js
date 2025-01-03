@@ -1,8 +1,8 @@
 function loop() {
-    const loopElements = document.querySelectorAll("[s-loop]");
+    const loopElements = document.querySelectorAll("[q-loop]");
 
     loopElements.forEach((element) => {
-        let loopValue = element.getAttribute("s-loop");
+        let loopValue = element.getAttribute("q-loop");
         let loopThese = element.innerHTML;
 
         for (let i = 0; i < loopValue - 1; i++) {
@@ -12,10 +12,10 @@ function loop() {
 }
 
 function search() {
-    const searchInput = document.querySelectorAll("[s-search]");
+    const searchInput = document.querySelectorAll("[q-search]");
 
     searchInput.forEach((element) => {
-        const attrValue = element.getAttribute("s-search");
+        const attrValue = element.getAttribute("q-search");
         const notLi = document.querySelector(attrValue).children[0].tagName;
         const listItems = document.querySelectorAll(`${attrValue} ${notLi}`);
 
@@ -36,10 +36,10 @@ function search() {
 }
 
 function shortcut() {
-    const shortcutElements = document.querySelectorAll("[s-shortcut]");
+    const shortcutElements = document.querySelectorAll("[q-shortcut]");
 
     shortcutElements.forEach((element) => {
-        const shortcut = element.getAttribute("s-shortcut");
+        const shortcut = element.getAttribute("q-shortcut");
         let shortKey = shortcut.trim().split("ctrl + ").join("").trim();
 
         if (shortKey === "w" || shortKey === "t") {
@@ -70,65 +70,65 @@ function shortcut() {
 }
 
 function click() {
-    const clickElements = document.querySelectorAll("[s-click]");
+    const clickElements = document.querySelectorAll("[q-click]");
     let head = document.querySelector("head");
 
     if (head) {
         let style = document.createElement("style");
         style.innerHTML += `
-.hidden-for-s-click {
+.hidden-for-q-click {
     display: none;
 }
 `;
         head.appendChild(style);
     } else {
         console.error(
-            "A head tag is necessary for making an [s-click] element."
+            "A head tag is necessary for making an [q-click] element."
         );
     }
 
     clickElements.forEach((element) => {
         const box = document.querySelector(
-            `${element.getAttribute("s-click")}`
+            `${element.getAttribute("q-click")}`
         );
-        box.classList.add("hidden-for-s-click");
+        box.classList.add("hidden-for-q-click");
 
         element.addEventListener("click", () => {
-            box.classList.toggle("hidden-for-s-click");
+            box.classList.toggle("hidden-for-q-click");
         });
     });
 }
 
 function hover() {
-    const hoverElements = document.querySelectorAll("[s-hover]");
+    const hoverElements = document.querySelectorAll("[q-hover]");
     let head = document.querySelector("head");
 
     if (head) {
         let style = document.createElement("style");
         style.innerHTML += `
-.hidden-for-s-hover {
+.hidden-for-q-hover {
     display: none;
 }
 `;
         head.appendChild(style);
     } else {
         console.error(
-            "A head tag is necessary for making an [s-hover] element."
+            "A head tag is necessary for making an [q-hover] element."
         );
     }
 
     hoverElements.forEach((element) => {
         const box = document.querySelector(
-            `${element.getAttribute("s-hover")}`
+            `${element.getAttribute("q-hover")}`
         );
-        box.classList.add("hidden-for-s-hover");
+        box.classList.add("hidden-for-q-hover");
 
         element.addEventListener("mouseover", () => {
-            box.classList.remove("hidden-for-s-hover");
+            box.classList.remove("hidden-for-q-hover");
         });
 
         element.addEventListener("mouseout", () => {
-            box.classList.add("hidden-for-s-hover");
+            box.classList.add("hidden-for-q-hover");
         });
     });
 }

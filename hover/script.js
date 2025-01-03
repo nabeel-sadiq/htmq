@@ -1,27 +1,27 @@
-const hoverElements = document.querySelectorAll("[s-hover]");
+const hoverElements = document.querySelectorAll("[q-hover]");
 let head = document.querySelector("head");
 
 if (head) {
     let style = document.createElement("style");
     style.innerHTML += `
-.hidden-for-s-hover {
+.hidden-for-q-hover {
     display: none;
 }
 `;
     head.appendChild(style);
 } else {
-    console.error("A head tag is necessary for making an [s-hover] element.");
+    console.error("A head tag is necessary for making an [q-hover] element.");
 }
 
 hoverElements.forEach((element) => {
-    const box = document.querySelector(`${element.getAttribute("s-hover")}`);
-    box.classList.add("hidden-for-s-hover");
+    const box = document.querySelector(`${element.getAttribute("q-hover")}`);
+    box.classList.add("hidden-for-q-hover");
 
     element.addEventListener("mouseover", () => {
-        box.classList.remove("hidden-for-s-hover");
+        box.classList.remove("hidden-for-q-hover");
     });
 
     element.addEventListener("mouseout", () => {
-        box.classList.add("hidden-for-s-hover");
+        box.classList.add("hidden-for-q-hover");
     });
 });

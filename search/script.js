@@ -1,7 +1,7 @@
-const searchInput = document.querySelectorAll("[s-search]");
+const searchInput = document.querySelectorAll("[q-search]");
 
 searchInput.forEach((element) => {
-    const attrValue = element.getAttribute("s-search");
+    const attrValue = element.getAttribute("q-search");
     const notLi = document.querySelector(attrValue).children[0].tagName;
     const listItems = document.querySelectorAll(`${attrValue} ${notLi}`);
 

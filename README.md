@@ -1,19 +1,17 @@
 # ⚡ HTMQ
 
-HTMQ is an npm package that supercharges your html with some useful and shorthand attributes.
+HTMQ allows you to supercharge your html with some useful and shorthand attributes.
 Every attribute is prefixed with `-s`, and the attributes available to date are:
 
--   s-click
--   s-hover
--   s-loop
--   s-search
--   s-shortcut
+-   q-click
+-   q-hover
+-   q-loop
+-   q-search
+-   q-shortcut
 
-You can install htmq (~4kb), via npm or more preferably, via the CDN:
+Documentation for all these attributes is available [here](https://htmq.vercel.app).
 
-```bash
-npm install htmq
-```
+You can install htmq (~4kb), via the CDN:
 
 ```html
 <script src="https://unpkg.com/htmq" defer></script>
